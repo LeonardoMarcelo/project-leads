@@ -1,0 +1,188 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+    
+    /*========== Colors ==========*/
+    --primary-color: #fff;
+    --acent-color: #2B49FE;
+    --white-color: #fff;
+    --black-color: #000;
+    
+    /*========== Font and typography ==========*/
+    --body-font: 'Inter', sans-serif;
+    --h1-font-size:  1.5rem;
+    --h2-font-size: 1.125rem;
+    --normal-font-size: 1.063rem;
+
+/*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+}
+
+/*FONT SIZE FOR LARGES DEVICES */
+@media (min-width: 968px) {
+    :root {
+        --h1-font-size: 1.8rem;
+        --h2-font-size: 1.25rem;
+    }
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+body{
+    height: 100vh;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    line-height: 1.5;
+    background-color: var(--primary-color);
+    color: var(--black-color);
+}
+
+h1,h2{
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}
+
+a { 
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 68.75rem;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.section {
+  padding-top: 3.75rem;
+}
+
+.form__title span {
+    color: var(--acent-color);
+    font-size: 2rem;
+}
+
+.form__content {
+    max-width: 400px;
+    margin-top: 2.625rem;
+}
+
+.form__content .welcome__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: 0.938rem;
+}
+
+.form__content .form__title {
+    font-size: var(--h1-font-size);
+}
+
+.input__container {
+    margin-top: 1.875rem;
+    max-width: 90%;
+}
+
+.input__container .form__div {
+    color: #666666;
+    display: grid;
+    grid-template-columns: 8% 93%;
+    align-items: center;
+}
+
+.form__div span {
+    grid-area: 3/1/4/3;
+    margin-top: 1.375rem;
+    color: #ff0000;
+}
+
+.input__container .form__div-one {
+    margin-bottom: 1.5rem;
+}
+
+.form__input {  
+    padding: 0.625rem 1.25rem;
+    grid-area: 2/1/3/3;
+    border: none;
+    outline: 1px solid #666666;
+}
+
+.form__input:focus {
+
+    transition: ease-out 0.2s;
+    transform: translateY(10px);
+    outline: 1px solid var(--acent-color);
+    
+}
+
+.icon {
+    color: var(--acent-color);
+}
+
+.form__button {
+    border: none;
+    margin-top: 2.438rem;
+    display: block;
+    text-align: center;
+    background-color: var(--acent-color);
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    cursor: pointer;
+} 
+
+
+@media(min-width: 70rem) {
+    .section {
+        padding-top: 5.625rem;
+    }
+    
+    .container {      
+        margin: 0 auto;
+    }
+
+    .login__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .img {
+        grid-area: 1/1/2/2;
+        justify-self: start;
+        height: 400px;
+    }
+
+    .form__content {
+        margin-top: 0;
+        grid-area: 1/2/2/3;
+        justify-self: end;
+    }
+    
+    .form__button {
+        width: 200px;
+    }
+
+    .form__button:hover {
+        transition: ease-out 0.2s;
+        background-color: hsl(231, 99%, 63%);
+    }
+}
